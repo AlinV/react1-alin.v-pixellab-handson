@@ -381,8 +381,12 @@ a {
   margin-top: 10px;
 }
 
+.header-top-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-social-and-contact {
-  float: left;
   margin-top: 13px;
   margin-left: 15%;
   font-size: 15px;
@@ -410,8 +414,11 @@ a {
   margin-top: 10px;
 }
 .header-controls-and-search {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
   margin-right: 15%;
-  float: right;
   font-size: 15px;
 }
 .header-controls-and-search section {
@@ -425,6 +432,11 @@ a {
 
 .header-controls-and-search li i {
   color: #2b2b2b;
+}
+
+.header-controls-and-search .header-counters {
+  display: flex;
+  align-items: center;
 }
 
 .header-controls a {
@@ -534,15 +546,50 @@ imaginea. Imi strica alinierea si nu am reusit sa o remediez, asa ca am apelat
   display: flex;
 }
 
-.product-tile-controls a {
+.product-tile-controls button {
+  border: none;
+  background-color: transparent;
   color: #2b2b2b;
-  font-size: 25px;
+
   display: inline-block;
   margin-left: 16px;
 }
 
-.product-tile-controls a i:hover {
+.product-tile-controls .add-to-cart {
+  border: 2px solid #2b2b2b;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+}
+
+.product-tile-controls .add-to-wishlist {
+  font-size: 28px;
+}
+
+.product-control .fa-spinner {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.product-tile-controls button:hover {
   color: #740878;
+}
+
+.product-tile-controls .add-to-cart:hover {
+  border: 2px solid #740878;
 }
 
 /* nu am vazut deloc hover in design. sterg daca nu e in regula :D
@@ -619,6 +666,14 @@ aside img {
   color: #2b2b2b;
 }
 
+.footer-newsletter-and-social {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  width: 242px;
+  max-width: 242px;
+}
+
 .footer-social li {
   display: inline-block;
 }
@@ -637,7 +692,7 @@ aside img {
 }
 .footer-sign-up-newsletter button {
   margin: 10px 5px;
-  padding: 5px 0;
+  padding: 5px 10px;
   font-family: 'Roboto';
   font-weight: normal;
 }
@@ -645,6 +700,10 @@ aside img {
 .footer-sign-up-newsletter button {
   max-width: 100px;
   margin-left: 0;
+}
+
+.footer-sign-up-newsletter .form-message {
+  font-size: 14px;
 }
 
 .footer-nav-style nav li {
