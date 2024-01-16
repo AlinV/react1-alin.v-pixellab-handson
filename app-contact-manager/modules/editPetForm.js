@@ -1,10 +1,10 @@
-export const render = (contact) => {
-  const { name, surname, email, phone, id } = contact;
+export const render = (pet) => {
+  const { name, age, species, id } = pet;
   const container = document.createElement('form');
-  container.classList.add('edit-contact');
+  container.classList.add('edit-pet');
 
   container.innerHTML = `
-  <h4>Editing contact ${name} ${surname}</h4>
+  <h4>Editing pet ${name}</h4>
     <label class="form-label mt-2">Name</label>
     <input type="text"
       name="name"
@@ -12,25 +12,18 @@ export const render = (contact) => {
       value="${name}"
     >
 
-    <label class="form-label mt-2">Surname</label>
+    <label class="form-label mt-2">Age</label>
     <input type="text"
-      name="surname"
+      name="age"
       class="form-control form-control-sm"
-      value="${surname}"
+      value="${age}"
     >
 
-    <label class="form-label mt-2">Phone</label>
-    <input type="tel"
-      name="phone"
+    <label class="form-label mt-2">Species</label>
+    <input type="text"
+      name="species"
       class="form-control form-control-sm"
-      value="${phone}"
-    >
-
-    <label class="form-label mt-2">Email</label>
-    <input type="email"
-      name="email"
-      class="form-control form-control-sm"
-      value="${email}"
+      value="${species}"
     >
 
     <input type="hidden" name="id" value="${id}">
